@@ -3,6 +3,7 @@
 > **차량 센서 기반 스마트 피로도 분석 및 휴식 컨시어지**
 
 ![SafeDrive in-car Pleos display mockup](assets/safedrive-in-car-mockup.png)
+*▲ 현대자동차 더 뉴 아이오닉 5 파노라믹 커브드 디스플레이 (ccNC / Pleos OS) 실제 탑재 구동 목업*
 
 ---
 
