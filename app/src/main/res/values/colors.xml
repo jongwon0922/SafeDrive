@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#121418</color>
+    <color name="card_dark">#1E222B</color>
+    <color name="primary_accent">#0072CE</color> <!-- Hyundai Blue -->
+    <color name="text_primary">#F1F3F5</color>
+    <color name="text_secondary">#9E9E9E</color>
+    <color name="safety_green">#4CAF50</color>
+    <color name="safety_orange">#FF9800</color>
+    <color name="safety_red">#F44336</color>
+</resources>

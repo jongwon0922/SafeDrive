@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🛡️ SafeDrive · Hyundai Pleos"
+            android:textColor="@color/primary_accent"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="98 km/h"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:id="@+id/tv_steering_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조향각: 0.0°"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+            android:id="@+id/tv_driving_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연속 주행: 45분"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Main Content Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Left: Fatigue Gauge Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/card_dark"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="실시간 운전자 피로 지수"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_fatigue_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@color/safety_green"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progress_fatigue"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:max="100"
+                android:progress="15"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tv_fatigue_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정상 주행 (안정 패턴)"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Right: Rest Area Concierge Card -->
+        <LinearLayout
+            android:id="@+id/layout_rest_area_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:background="@color/card_dark"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="☕ Pleos 스마트 휴식 컨시어지 추천"
+                android:textColor="@color/safety_orange"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_rest_area_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ 안성휴게소 (부산방향)"
+                android:textColor="@color/text_primary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_rest_area_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주차 여유 | 인기메뉴: 소떡소떡, 안성국밥
+카페: 스타벅스, 투썸플레이스"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp" />
+
+            <Button
+                android:id="@+id/btn_add_waypoint"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:text="경유지로 등록 (원클릭)"
+                android:backgroundTint="@color/primary_accent"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom TTS Prompt & Simulation Control Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_tts_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎙️ TTS 음성 안내: 안정적인 주행 상태를 유지하고 있습니다."
+            android:textColor="@color/primary_accent"
+            android:textSize="15sp"
+            android:padding="8dp" />
+
+        <!-- Simulation Scenario Switcher for Judges & Demo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎮 시연 시뮬레이터:"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="12dp" />
+
+            <Button
+                android:id="@+id/btn_sim_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="1. 정상 주행"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_sim_caution"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="2. 피로 주의 (환기/음악)"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_sim_danger"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="3. 위험 졸음 (휴게소 추천)" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
