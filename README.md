@@ -2,6 +2,8 @@
 > 현대자동차그룹 차량용 앱 개발 공모전 (Pleos App Market) 출품작
 > **차량 센서 기반 스마트 피로도 분석 및 휴식 컨시어지**
 
+![SafeDrive in-car Pleos display mockup](assets/safedrive-in-car-mockup.png)
+
 ---
 
 ## 📌 1. 프로젝트 개요 (Overview)
