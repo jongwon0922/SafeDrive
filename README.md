@@ -20,7 +20,7 @@
 
 공모전 공지(비공개 GitHub 저장소 제출 방법 및 접수 관련 추가 안내)에 따라 개발·테스트 환경을 적어 둡니다.
 
-- 실행 환경: Pleos Connect 에뮬레이터 2.1.0 (Pleos Playground 최신 배포판 기준)
+- 실행 환경: Pleos Connect 에뮬레이터 (Pleos Playground), Android API 28+
 - 플랫폼: Android API 28 이상(minSdk 28), Kotlin 1.9, Gradle 8.0 이상(Kotlin DSL)
 - 화면 규격: 1920 x 720 px, 12.3인치 와이드 디스플레이 기준(가로 고정)
 - 테마: 주행 중 눈부심을 줄이는 다크 테마
